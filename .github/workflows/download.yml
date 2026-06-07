@@ -8,15 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Download file
         run: |
-          wget -O myfile.zip "https://assets.frame.io/encode/49737924-0c60-41f1-b2c3-67fef0a66795/h264_1080_best.mp4?x-amz-meta-project_id=18b5325f-45c4-4e12-a795-55cc4fcf3b2c&x-amz-meta-project_id=18b5325f-45c4-4e12-a795-55cc4fcf3b2c&x-amz-meta-resource_type=asset&x-amz-meta-resource_id=49737924-0c60-41f1-b2c3-67fef0a66795&Expires=1780876800&Signature=Mq9jBErfoHnVynnapX8k7CaN~Nsx-SSgDLY8K7KpRG836xTbptPg~ayvXh-Y15fU9Msl2~5f1RvzO5bOvspHNmARSq-V6ydUQioH9x8PrZSl48TWKF9jOe6B62WDuqxRe9NdLrwHbQSZMH2OstkyUvuqyOu02vSuENOsIB2o6bm32jUGRH7uWVzRtmvAYTxEFM1e-xV~MhF94M~5EAj~EEpirz3KbXCuy6-cwra5sqi8Gp2hfcSXr8G42I1hz4QGPQEtrt9HAbMNHRyUPv8GSNBbB-QVHpmVqMehsygUkotVYl~fexoVAfUy7CoWWp4yRwjxoZd1mpuppCt3-r-Quw__&Key-Pair-Id=K1XW5DOJMY1ET9"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: downloaded-file
-          path: myfile.zip
+          wget -O myfile.bin ""https://assets.frame.io/encode/49737924-0c60-41f1-b2c3-67fef0a66795/h264_1080_best.mp4?x-amz-meta-project_id=18b5325f-45c4-4e12-a795-55cc4fcf3b2c&x-amz-meta-project_id=18b5325f-45c4-4e12-a795-55cc4fcf3b2c&x-amz-meta-resource_type=asset&x-amz-meta-resource_id=49737924-0c60-41f1-b2c3-67fef0a66795&Expires=1780876800&Signature=Mq9jBErfoHnVynnapX8k7CaN~Nsx-SSgDLY8K7KpRG836xTbptPg~ayvXh-Y15fU9Msl2~5f1RvzO5bOvspHNmARSq-V6ydUQioH9x8PrZSl48TWKF9jOe6B62WDuqxRe9NdLrwHbQSZMH2OstkyUvuqyOu02vSuENOsIB2o6bm32jUGRH7uWVzRtmvAYTxEFM1e-xV~MhF94M~5EAj~EEpirz3KbXCuy6-cwra5sqi8Gp2hfcSXr8G42I1hz4QGPQEtrt9HAbMNHRyUPv8GSNBbB-QVHpmVqMehsygUkotVYl~fexoVAfUy7CoWWp4yRwjxoZd1mpuppCt3-r-Quw__&Key-Pair-Id=K1XW5DOJMY1ET9""
